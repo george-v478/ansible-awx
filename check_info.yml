@@ -1,0 +1,11 @@
+- name: Collect host info
+  hosts: all
+  gather_facts: False
+  
+  tasks:
+
+  - name: Run command and return hostname
+    command: hostname
+    register: out
+
+  - debug: msg={{ out }}"
