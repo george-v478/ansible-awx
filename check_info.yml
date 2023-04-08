@@ -8,4 +8,4 @@
     command: hostname
     register: out
 
-  - debug: msg={{ out }}"
+  - debug: "msg={{ out }}"
