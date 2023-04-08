@@ -6,6 +6,7 @@
 
   - name: Run command and return hostname
     command: hostname
-    register: out
+    register: local_out
+    delegate_to: 10.0.2.5
 
-  - debug: "msg={{ out }}"
+  - debug: "msg={{ local_out }}"
