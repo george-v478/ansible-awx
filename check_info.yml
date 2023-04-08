@@ -1,11 +1,15 @@
 - name: Collect host info
   hosts: all
   gather_facts: False
+
+  vars:
+    one: "ONE"
+    two: "TWO"
   
   tasks:
 
   - name: Run command and return hostname
-    command: hostname
+    command: echo "{{ one }}"
     register: local_out
     delegate_to: 10.0.2.5
 
